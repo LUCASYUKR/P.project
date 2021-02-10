@@ -19,7 +19,7 @@ public class WordCountReducer extends Reducer<Text,IntWritable,Text,IntWritable>
 		int sum = 0;
 		
 		for(IntWritable val : values) {
-			sum+=val.get(); //중복텍스트는 어떻게 판별하지..?
+			sum+=val.get(); 
 		}
 		
 		result.set(sum);
