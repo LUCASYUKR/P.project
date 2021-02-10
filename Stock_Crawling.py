@@ -84,23 +84,6 @@ while True:
 
 
 
-    # stockHome = urlopen(
-    #     "https://query1.finance.yahoo.com/v7/finance/download/ES=F?period1={}&period2={}&interval=1d&events=history&includeAdjustedClose=true".format(
-    #         first, second),context=context)
-    # # pageSoup = BeautifulSoup(stockHome, "html.parser")
-    # #
-    # # date = pageSoup.findAll("tr",{"class":"BdT Bdc($seperatorColor) Ta(end) Fz(s) Whs(nw)"})
-    # #
-    # # f = open("/Users/dbdudghks/Desktop/stock_S&P",'wt', newline="", encoding='utf-8')
-    # # csv = csv.writer(f)
-    # # print(date.get_text())
-    # # print(date[1].get_text())
-    # #
-    # # for i in range(days):
-    # #     csv.writerows(date[i].get_text())
-    # #
-    # # f.close()
-
 
 
 
