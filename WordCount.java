@@ -12,18 +12,18 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 
 
-public class WordCount { //driver class
+public class WordCount { 
 	
 	public static void main(String[] args) throws Exception{
 		
-		Configuration conf = new Configuration(); //hadoop È¯°æ¼³Á¤ ¿­±â
+		Configuration conf = new Configuration();
 		
-		if(args.length!=2) { //µé¾î¿Â ¹®ÀÚ¿­ÀÌ 2°³°¡ ¾Æ´Ï¸é ÇÁ·Î±×·¥ Á¾·á = args[0]=key(text),args[1]=value(wordcount) 2°³ ¹®ÀÚ¿­
+		if(args.length!=2) { //ë“¤ì–´ì˜¨ ë¬¸ìì—´ì´ 2ê°œê°€ ì•„ë‹ˆë©´ í”„ë¡œê·¸ë¨ ì¢…ë£Œ = args[0]=key(text),args[1]=value(wordcount) 2ê°œ ë¬¸ìì—´
 			System.err.println("Usage : WordCount <input><output>");
 			System.exit(2);
 		}
 		
-		Job job = new Job(conf,"WordCount"); //hadoop ÀÛ¾÷È¯°æ ¼³Á¤
+		Job job = new Job(conf,"WordCount"); //hadoop ì‘ì—…í™˜ê²½ ì„¤ì •
 		
 		job.setJarByClass(WordCount.class);
 		job.setMapperClass(WordCountMapper.class);
@@ -35,8 +35,8 @@ public class WordCount { //driver class
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 		
-		FileInputFormat.addInputPath(job, new Path(args[0])); //ÀĞ¾î¿Ã ÆÄÀÏ¸í 
-		FileOutputFormat.setOutputPath(job, new Path(args[1])); //»õ·Î ¸¸µé¾î³¾ ÆÄÀÏ¸í
+		FileInputFormat.addInputPath(job, new Path(args[0])); //ì½ì–´ì˜¬ íŒŒì¼ëª… 
+		FileOutputFormat.setOutputPath(job, new Path(args[1])); //ìƒˆë¡œ ë§Œë“¤ì–´ë‚¼ íŒŒì¼ëª…
 		
 		job.waitForCompletion(true);
 	}
