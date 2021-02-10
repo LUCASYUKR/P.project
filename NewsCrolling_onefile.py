@@ -6,10 +6,7 @@ import ssl
 
 context = ssl._create_unverified_context()
 
-# 2021/01/05 Index 비어있는 것 처리 해야 함  -> 완료
-# 2021/01/07 문단 간 띄어쓰기 제거  -> 완
-# 2021/01/07 Index 가 더 이상 없는 경우 예외처리 필요함
-# 2021/01/07 하둡 wordcount or 데이터 분석을 위한 데이터 몰아 생성 로직 필요함
+
 select = input("2020/02~2020/12 : 1\n 2021/01~ : 2\n")
 
 if select == "1":
