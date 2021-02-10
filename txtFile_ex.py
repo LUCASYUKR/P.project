@@ -205,8 +205,8 @@ for line in lines:
     except ValueError:
         continue
 
-    if Current_word == line_split[0]:  # 이미 리듀스가 된 문자는
-        Current_count += count  # 숫자만 더해라
+    if Current_word == line_split[0]:  
+        Current_count += count 
     else:
         Current_count = count
         Current_word = line_split[0]
@@ -215,9 +215,9 @@ for line in lines:
             result = [[str(Current_word), str(Current_count)]]
             if Current_word != "" and len(Current_word) >= 2:
                 writer_csv.writerows(result)
-            # 리듀스를 새로 생성한 뒤 데이터를 출력한다.
+           
 
-if Current_word == line_split[0]:  # 이미 리듀스가 된 데이터에 값을 더한 데이터를 출력한다.
+if Current_word == line_split[0]:  
     result = [[str(Current_word), str(Current_count)]]
     if Current_word != "" and len(Current_word) >= 2:
         writer_csv.writerows(result)
