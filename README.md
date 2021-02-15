@@ -1,5 +1,5 @@
 # P.project
-Stock &amp; Trade industry news data analisys
+Stock &amp; Trade industry news data analysis
 
 ** NEWS CROWLING & ANALYSIS
 1. NewsCrolling_onefile.py (data = raw data)
