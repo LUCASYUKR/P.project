@@ -1,5 +1,4 @@
 import csv
-import pandas
 
 select = input("Select the data format <Oil, Stock>\n")
 if select == "Stock":
